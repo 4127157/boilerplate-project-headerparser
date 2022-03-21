@@ -16,7 +16,7 @@ app.use(express.static('public'));
 
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
-    console.dir(req);
+    console.log(req.rawHeaders);
   res.sendFile(__dirname + '/views/index.html');
 });
 
