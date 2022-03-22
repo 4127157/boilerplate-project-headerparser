@@ -30,7 +30,7 @@ app.get('/api/whoami', (req, res) => {
     let ip,
         lang,
         sw;
-    ip = req.ip();
+    ip = req.ip;
     res.json({
         "ip": ip
     });
