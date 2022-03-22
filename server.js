@@ -17,7 +17,7 @@ app.use(express.static('public'));
 // http://expressjs.com/en/starter/basic-routing.html
 app.get("/", function (req, res) {
     console.log(JSON.stringify(req.headers));
-  res.sendFile(__dirname + '/views/index.html');
+    res.sendFile(__dirname + '/views/index.html');
 });
 
 
@@ -31,8 +31,10 @@ app.get('/api/whoami', (req, res) => {
         lang,
         sw;
     ip = req.ip;
+    
     res.json({
-        "ip": ip
+        "ipaddress": ip,
+
     });
 });
 
